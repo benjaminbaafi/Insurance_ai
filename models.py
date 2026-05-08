@@ -17,7 +17,7 @@ class Industry(str, Enum):
 class InTakeForm(BaseModel):
     business_name: str = Field(..., description="The name of the business")
     industry: Industry = Field(..., description="The industry the business operates in")
-    years_of_operation: int = Field(ge=0, description="The number of years the business has been in operation")
+    years_in_operation: int = Field(ge=0, description="The number of years the business has been in operation")
     number_of_employees: int = Field(ge=1, description="The number of employees in the business")
     annual_revenue: float = Field(gt=0, description="The annual revenue of the business")
 
